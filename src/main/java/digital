@@ -1,0 +1,44 @@
+package momoang;
+
+public class DigitalGadget {
+	private int price;
+	private int batteryLifeHours;
+	private String modelName;
+	
+	public DigitalGadget(String modelName,int batteryLifeHours,int price) {
+		this.modelName=modelName;
+		this.batteryLifeHours=batteryLifeHours;
+		this.price=price;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	public int getBatteryLifeHours() {
+		return batteryLifeHours;
+	}
+
+	public void setBatteryLifeHours(int batteryLifeHours) {
+		this.batteryLifeHours = batteryLifeHours;
+	}
+
+	public String getModelName() {
+		return modelName;
+	}
+
+	public void setModelName(String modelName) {
+		this.modelName = modelName;
+	}
+	
+	public boolean isPremium() {
+		if(price>500&&batteryLifeHours>10)
+			return true;
+		return false;
+	}
+	
+}
