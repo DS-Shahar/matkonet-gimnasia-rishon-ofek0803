@@ -38,7 +38,37 @@ public class bibijj {
 		return true;
 		}
 	
-	public static void main(String[] args) {
+	public static String findExpPremium(DigitalGadget[]a) {
+		int max=0;
+		String name=null;
+		for (int i=0;i<a.length;i++) {
+			if (a[i].isPremium()) {
+				if (a[i].getPrice()>=max) {
+					max=a[i].getPrice();
+					name=a[i].getModelName();
+			}
+			}
+		}
+		return name;
+	}
+	
+	public static DigitalGadget[] build(DigitalGadget[]a) {
+		DigitalGadget[] p=new DigitalGadget[a.length];
+		int count=0;
+		for (int i=0;i<a.length;i++) {
+			if (a[i].isPremium()) {
+				p[count]=a[i];
+			}
+		}
+		for (int i=0;i<a.length;i++) {
+			if (a[i].isPremium()==false) {
+				p[count]=a[i];
+			}
+	}
+		return p;
 	}
 
+	public static void main(String[] args) {
+	}
+	
 }
